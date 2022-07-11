@@ -1,0 +1,11 @@
+
+default: &default
+  adapter: postgresql
+  url: postgres://postgres:postgres@localhost:5432/saasprojectdatabase
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+
+development:
+  <<: *default
+
+
